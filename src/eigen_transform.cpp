@@ -1,19 +1,18 @@
 #include "ros/ros.h"
 #include <Eigen/Dense>
 #include <cmath>
-# define PI 3.14159265358979323846
 
 Eigen::Vector3d rad2deg(Eigen::Vector3d radians)
 {
     // Implement your code here
-    radians = radians * 180 / PI;
+    radians = radians * 180 / M_PI;
     return radians;
 }
 
 Eigen::Vector3d deg2rad(Eigen::Vector3d degrees)
 {
     // Implement your code here
-    degrees = degrees / 180 * PI;
+    degrees = degrees / 180 * M_PI;
     return degrees;
 }
 
