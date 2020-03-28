@@ -68,9 +68,10 @@ int main(int argc, char **argv)
 
         // Apply rotation to point with quaternion
         // Implement your code here
-	Eigen::Quaterniond world_Q = Eigen::Quaterniond(0, world_point.x(), world_point.y(), world_point.z());
-	world_Q = Q_tmp * world_Q * Q_tmp.inverse();
-	world_point = world_Q.vec();
+	// Eigen::Quaterniond world_Q = Eigen::Quaterniond(0, world_point.x(), world_point.y(), world_point.z());
+	// world_Q = Q_tmp * world_Q * Q_tmp.inverse();
+	// world_point = world_Q.vec();
+	world_point = Q_tmp * world_point;
         count ++;
         std::cout << "Current point position " << world_point.transpose() << std::endl << std::endl;
 
